@@ -4,30 +4,12 @@ import {
     creator,
     web,
 
-    blender,
-    bootstrap,
-    cpp,
     csharp,
-    css,
+    python,
     cuda,
     django,
     docker,
-    flask,
-    git,
-    html,
-    java,
-    javascript,
-    kotlin,
-    mongodb,
-    nodejs,
-    numpy,
-    pandas,
-    python,
-    reactjs,
     rust,
-    tailwind,
-    threejs,
-    typescript,
 
     cog,
     liberty,
@@ -73,14 +55,6 @@ const services = [
 
 const technologies = [
     {
-        name: "bootstrap",
-        icon: bootstrap
-    },
-    {
-        name: "cpp",
-        icon: cpp
-    },
-    {
         name: "cs",
         icon: csharp
     },
@@ -97,32 +71,12 @@ const technologies = [
         icon: docker
     },
     {
-        name: "git",
-        icon: git
-    },
-    {
-        name: "javascript",
-        icon: javascript
-    },
-    {
         name: "python",
         icon: python
     },
     {
-        name: "reactjs",
-        icon: reactjs
-    },
-    {
         name: "rust",
         icon: rust
-    },
-    {
-        name: "tailwind",
-        icon: tailwind
-    },
-    {
-        name: "typescript",
-        icon: typescript
     },
 ];
 
@@ -177,14 +131,14 @@ const testimonials = [
         image: "https://como.ceb.cam.ac.uk/media/biogs/sd626_photo.jpg",
     },
     {
-        testimonial: "I've never met a web developer who truly cares about their clients' success like Giorgi does.",
+        testimonial: "I've never met a web developer who truly cares about their clients' success like Gio does.",
         name: "Gustavo Pinto",
         designation: "COO",
         company: "DEF Corp",
         image: "https://www.coatingspromag.com/uploads/images/2014/07/Orion%20Engineered%20Carbons%20-%20Gustavo%20Pinto.jpg",
     },
     {
-        testimonial: "Gio helped us kickstart our startup business and supported us throughout the whole process! We can't thank him enough!",
+        testimonial: "Gio helped us kickstart our startup business and supported us throughout the whole process!",
         name: "Andrew Karan",
         designation: "President",
         company: "UpCode",
