@@ -119,6 +119,18 @@ const experiences = [
             "Implementing role based authentication and ensuring cross-browser compatibility.",
             "Making the design fully responsive and mobile friendly.",
         ],
+    },
+    {
+        title: "Node & React full stack web developer",
+        company_name: "Hinkal.pro",
+        icon: liberty,
+        iconBg: "#383E56",
+        date: "September 2023 - Currently",
+        points: [
+            "Tasked with maintaining the existing UI as well as implementing high quality components for new features",
+            "Collaborating with cross company teams including designers, product managers, and other developers to deliver the expectations in record breaking times",
+            "Participating in code reviews and providing as well as receiving constructive feedback to and from other developers.",
+        ],
     }
 ];
 
@@ -202,6 +214,27 @@ const projects = [
         ],
         image: admindashboardcog,
         source_code_link: "https://github.com/",
+    },
+    {
+        name: "Crypton",
+        description: "A blockain based web app, built for fun and as a showcase of my skill and knowhow, with many modern technologies used, such as: .NET 8 Blazor Hybrid & WebAssembly, " 
+                     + "Realtime connections with WebSockets through SignalR and many more in-house technologies made by me for anti-bot account protection, rate limtting and Identity management, all under one single project",
+        tags: [
+            {
+                name: "ASP.NET Blazor",
+                color: "purple-text-gradient",
+            },
+            {
+                name: "PostgreSQL",
+                color: "ping-text-gradient",
+            },
+            {
+                name: "TailwindCss",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: admindashboardcog,
+        source_code_link: "https://github.com/ddjerqq/Crypton",
     },
 ];
 
