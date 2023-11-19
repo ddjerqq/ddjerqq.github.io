@@ -20,8 +20,7 @@ const Hero = () => {
                     </h1>
                     <p className={`${styles.heroSubText} mt-2 text-white-100`}>
                         I develop full-stack web apps,<br className='sm:block hidden'/>
-                        and deliver solutions, fast, efficiently, and cheap.<br className='sm:block hidden'/>
-                        {/*Currently, I am learning <span className='text-[#90E119]'>CUDA.</span>*/}
+                        and deliver solutions, fast, efficiently, and with unmatched quality and performance.<br className='sm:block hidden'/>
                     </p>
                 </div>
             </div>
