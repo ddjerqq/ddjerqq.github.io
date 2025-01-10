@@ -13,6 +13,10 @@ export default defineConfig({
             name: 'Geist',
             src: './public/fonts/geist/*.woff2',
           },
+          {
+            name: 'GeistMono',
+            src: './public/fonts/geistMono/*.woff2',
+          }
         ],
       },
     }),

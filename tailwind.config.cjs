@@ -62,6 +62,7 @@ module.exports = {
   		},
 			fontFamily: {
 				geist: ['Geist', 'sans-serif'],
+				geistMono: ['GeistMono', 'monospace']
 			},
   	}
   },

@@ -15,7 +15,10 @@ createRoot(root).render(
         <MainLayout>
           <Routes>
             <Route path="/" element={<Index/>}/>
-            <Route path="/me" element={<div>me</div>}/>
+            <Route path="/about" element={<div>about</div>}/>
+            <Route path="/career" element={<div>career</div>}/>
+            <Route path="/blog" element={<div>blog</div>}/>
+            <Route path="/hire" element={<div>hire</div>}/>
             <Route path="*" element={<NotFound/>}></Route>
           </Routes>
         </MainLayout>

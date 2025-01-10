@@ -1,65 +1,30 @@
-﻿import {Link} from "@/components/ui/link";
-import {Button} from "@/components/ui/button";
-import React from "react";
+﻿import React from "react";
 import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Link} from "@/components/ui/link";
+import {BackgroundBeams} from "@/components/ui/BackgroundBeams";
 
 export const AppFooter = () => {
   return (
-    <footer className="px-8 py-2 border-grid border-t bg-background">
-      <div className="container">
-        <div className="py-4 grid items-start gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-          <div className="col-span-1 sm:col-span-2 flex flex-col gap-2 max-w-md">
-                <span className="text-xl font-semibold mb-2">
-                    Newsletter
-                </span>
+    <footer className="px-8 mb-20 py-2 border-grid border-t bg-background relative antialiased">
+      <div>
+        <div className="py-4 grid items-start gap-12 grid-cols-1 sm:grid-cols-2">
+          <div className="flex flex-col gap-2 max-w-md">
+              <span className="text-xl font-semibold mb-2">
+                  Newsletter
+              </span>
 
             <span className="text-muted-foreground text-sm">
-                    Enter your email to receive notifications about product updates and our newsletter.
-                </span>
-
-            <Input placeholder="Enter your email"/>
-
-            <Button>Subscribe</Button>
-          </div>
-
-          <div className="flex flex-col gap-2">
-                <span className="text-xl font-semibold mb-2">
-                    Partner sites
-                </span>
-
-            <ul className="text-sm space-y-1">
-              <li>
-                <Link target="_blank" rel="noreferer" href="https://amazon.com">
-                  amazon.com
-                </Link>
-              </li>
-              <li>
-                <Link target="_blank" rel="noreferer" href="https://ebay.com">
-                  ebay.com
-                </Link>
-              </li>
-              <li>
-                <Link target="_blank" rel="noreferer" href="https://aliexpress.com">
-                  aliexpress.com
-                </Link>
-              </li>
-              <li>
-                <Link target="_blank" rel="noreferer" href="https://alibaba.com">
-                  alibaba.com
-                </Link>
-              </li>
-              <li>
-                <Link target="_blank" rel="noreferer" href="https://shein.com">
-                  shein.com
-                </Link>
-              </li>
-            </ul>
+                  Enter your email to receive notifications about new blogs and updates from me!
+              </span>
+            <Input disabled placeholder="Enter your email"/>
+            <Button disabled>Subscribe</Button>
           </div>
 
           <address className="flex flex-col gap-1 not-italic">
-                <span className="text-xl font-semibold mb-2">
-                    Contact
-                </span>
+              <span className="text-xl font-semibold mb-2">
+                  Contact
+              </span>
 
             <ul className="text-sm space-y-1">
               <li>
@@ -98,7 +63,6 @@ export const AppFooter = () => {
             </ul>
           </address>
         </div>
-
         <div className="w-full text-start pb-4 text-sm leading-loose text-muted-foreground">
           &copy; 2025-2028 All rights reserved.{` `}
 
@@ -106,6 +70,7 @@ export const AppFooter = () => {
             Telegram
           </Link>
         </div>
+        <BackgroundBeams/>
       </div>
     </footer>
   );
