@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {ThemeProvider} from "@/components/ThemeProvider";
 import {Index} from "@/pages/Index/Index";
 import {NotFound} from "@/pages/NotFound";
+import {Toaster} from "@/components/ui/sonner";
 
 const root = document.getElementById("root")!;
 createRoot(root).render(
@@ -21,6 +22,8 @@ createRoot(root).render(
             <Route path="/hire" element={<div>hire</div>}/>
             <Route path="*" element={<NotFound/>}></Route>
           </Routes>
+
+          <Toaster/>
         </MainLayout>
       </BrowserRouter>
     </ThemeProvider>

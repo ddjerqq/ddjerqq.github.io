@@ -1,4 +1,5 @@
 ﻿import {createContext, useContext, useEffect, useState} from "react"
+import {toast} from "sonner";
 
 type Theme = "dark" | "light" | "system"
 
@@ -52,8 +53,17 @@ export const ThemeProvider = (
   const value = {
     theme,
     setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme)
-      setTheme(theme)
+      const oldTheme = localStorage.getItem(storageKey) as Theme || defaultTheme;
+      localStorage.setItem(storageKey, theme);
+      setTheme(theme);
+      toast("Theme changed!", {
+        description: "Thank you for changing the theme!",
+        className: "text-start",
+        action: {
+          label: "Undo",
+          onClick: () => setTheme(oldTheme),
+        },
+      })
     },
   }
 
