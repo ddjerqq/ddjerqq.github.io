@@ -20,8 +20,8 @@ import {HackText} from "@/components/ui/HackedText";
 
 export const AppHeader = () => {
   return (
-    <header
-      className="p-4 py-3 rounded-lg fixed top-5 mx-auto z-50 flex gap-6 sm:gap-36 items-center justify-between border border-grid backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="p-4 py-3 rounded-lg fixed top-5 z-50 flex gap-6 w-[80%] sm:w-[60%] items-center
+                       justify-between border border-grid backdrop-blur supports-[backdrop-filter]:bg-background/40">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="sm">
@@ -68,12 +68,12 @@ export const AppHeader = () => {
       <div className="space-x-2 flex items-center">
         <ThemeToggle/>
 
-        <Link to="https://github.com/ddjerqq" className={buttonVariants({variant: "outline", size: "sm"})}>
+        <Link to="https://github.com/ddjerqq" className={'hidden sm:flex ' + buttonVariants({variant: "outline", size: "sm"})}>
           <Github/>
           GitHub
         </Link>
 
-        <Link to="/get_in_touch" className={buttonVariants({variant: "default", size: "sm"})}>
+        <Link to="/contact" className={buttonVariants({variant: "default", size: "sm"})}>
           Get in touch
         </Link>
       </div>

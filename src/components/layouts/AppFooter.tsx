@@ -6,7 +6,8 @@ import {BackgroundBeams} from "@/components/ui/BackgroundBeams";
 
 export const AppFooter = () => {
   return (
-    <footer className="px-8 pb-6 py-2 w-full border-grid border-t bg-background relative antialiased">
+    <footer className="relative bottom-0 z-50 px-8 pb-6 py-2 w-full border-grid border-t bg-background antialiased">
+      <div className="relative">
       <div className="py-4 grid items-start gap-12 grid-cols-1 sm:grid-cols-2">
         <div className="flex flex-col gap-2 max-w-md">
             <span className="text-xl font-semibold mb-2">
@@ -63,6 +64,7 @@ export const AppFooter = () => {
         </address>
       </div>
       <BackgroundBeams/>
+      </div>
     </footer>
   );
 }
