@@ -9,10 +9,10 @@ interface MainLayoutProps {
 export const MainLayout = ({children}: MainLayoutProps) => {
   return (
     <>
-      <div className="h-full flex flex-col items-stretch justify-between">
+      <div className="relative h-full flex flex-col items-center justify-between">
         <AppHeader/>
 
-        <section className="w-full px-8 mt-24 my-8">
+        <section className="w-full px-8 mt-32 my-8">
           <div className="h-full flex-1 space-y-4 w-full flex flex-col items-center justify-center text-center">
             {children}
           </div>

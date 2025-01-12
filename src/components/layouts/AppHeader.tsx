@@ -1,42 +1,79 @@
 ﻿import {ThemeToggle} from "@/components/ThemeToggle";
 import {Link} from 'react-router-dom';
-import {buttonVariants} from "@/components/ui/button";
+import {Button, buttonVariants} from "@/components/ui/button";
+import {Avatar, AvatarFallback, AvatarImage,} from "@/components/ui/avatar"
+import {Banknote, BookMarkedIcon, CreditCard, FunctionSquare, GitCommit, Github, LockOpen, LucideVolleyball, User,} from "lucide-react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {HackedDropdownMenuItem} from "@/components/ui/HackedDropdownMenuItem";
+import {HackText} from "@/components/ui/HackedText";
 
 export const AppHeader = () => {
   return (
     <header
-      className="px-8 py-2 fixed top-0 mx-auto z-50 w-full flex items-center justify-between border-b border-grid bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      className="p-4 py-3 rounded-lg fixed top-5 mx-auto z-50 flex gap-6 sm:gap-36 items-center justify-between border border-grid backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" size="sm">
+            <Avatar className="w-7 h-7">
+              <AvatarImage src="/favicons/favicon.ico" alt="@ddjerqq"/>
+              <AvatarFallback>GN</AvatarFallback>
+            </Avatar>
+            <span className="font-bold">About me</span>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="w-48">
+          <DropdownMenuLabel>About me</DropdownMenuLabel>
+          <DropdownMenuGroup>
+            <HackedDropdownMenuItem text="Who am I?" href="/" icon={<User/>}/>
+            <HackedDropdownMenuItem text="Hobbies" href="/hobbies" icon={<LucideVolleyball/>}/>
+            <HackedDropdownMenuItem text="Interests" href="/interests" icon={<FunctionSquare/>}/>
+          </DropdownMenuGroup>
+          <DropdownMenuSeparator/>
 
-      <div className="mr-4 flex">
-        <Link to="/" className="mr-4 flex items-center gap-2">
-          <img src="/favicon.ico" alt="logo" className="w-8 h-8 rounded-full"/>
-          <span className="font-bold">Giorgi Nachkebia</span>
-        </Link>
+          <DropdownMenuLabel>Career</DropdownMenuLabel>
+          <DropdownMenuGroup>
+            <HackedDropdownMenuItem text="Work experience" href="/career/work" icon={<Banknote/>}/>
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger>
+                <GitCommit />
+                <Link to="/career/projects">
+                  <HackText text="Projects"/>
+                </Link>
+              </DropdownMenuSubTrigger>
+              <DropdownMenuPortal>
+                <DropdownMenuSubContent>
+                  <HackedDropdownMenuItem text="Freelance" href="/career/freelance" icon={<CreditCard/>}/>
+                  <HackedDropdownMenuItem text="Open source" href="/career/oss" icon={<LockOpen/>}/>
+                </DropdownMenuSubContent>
+              </DropdownMenuPortal>
+            </DropdownMenuSub>
+          </DropdownMenuGroup>
+          <DropdownMenuSeparator/>
 
-        <nav className="flex items-center text-sm gap-4">
-          <Link to="/about"
-                className="hover:text-foreground text-foreground/80 [&.active]:font-bold [&.active]:text-primary transition-colors">
-            About me
-          </Link>
-          <Link to="/career"
-                className="hover:text-foreground text-foreground/80 [&.active]:font-bold [&.active]:text-primary transition-colors">
-            Career
-          </Link>
-          <Link to="/blog"
-                className="hover:text-foreground text-foreground/80 [&.active]:font-bold [&.active]:text-primary transition-colors">
-            Blog
-          </Link>
-          <Link to="/hire_me"
-                className="hover:text-foreground text-foreground/80 [&.active]:font-bold [&.active]:text-primary transition-colors">
-            Hire me
-          </Link>
-        </nav>
-      </div>
+          <HackedDropdownMenuItem text="Blog" href="/career/work" icon={<BookMarkedIcon/>}/>
+        </DropdownMenuContent>
+      </DropdownMenu>
 
       <div className="space-x-2 flex items-center">
         <ThemeToggle/>
 
-        <Link to="/get_in_touch" className={buttonVariants({variant: "default", size: "default"})}>
+        <Link to="https://github.com/ddjerqq" className={buttonVariants({variant: "outline", size: "sm"})}>
+          <Github/>
+          GitHub
+        </Link>
+
+        <Link to="/get_in_touch" className={buttonVariants({variant: "default", size: "sm"})}>
           Get in touch
         </Link>
       </div>
