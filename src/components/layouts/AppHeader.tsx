@@ -35,9 +35,8 @@ export const AppHeader = () => {
         <DropdownMenuContent className="w-48">
           <DropdownMenuLabel>About me</DropdownMenuLabel>
           <DropdownMenuGroup>
-            <HackedDropdownMenuItem text="Who am I?" href="/" icon={<User/>}/>
-            <HackedDropdownMenuItem text="Hobbies" href="/hobbies" icon={<LucideVolleyball/>}/>
-            <HackedDropdownMenuItem text="Interests" href="/interests" icon={<FunctionSquare/>}/>
+            <HackedDropdownMenuItem text="Who am I?" href="/#whoami" icon={<User/>}/>
+            <HackedDropdownMenuItem text="My skills" href="/#my-skills" icon={<LucideVolleyball/>}/>
           </DropdownMenuGroup>
           <DropdownMenuSeparator/>
 
@@ -66,7 +65,7 @@ export const AppHeader = () => {
       </DropdownMenu>
 
       <div className="space-x-2 flex items-center">
-        <ThemeToggle/>
+        {/*<ThemeToggle/>*/}
 
         <Link to="https://github.com/ddjerqq" className={'hidden sm:flex ' + buttonVariants({variant: "outline", size: "sm"})}>
           <Github/>

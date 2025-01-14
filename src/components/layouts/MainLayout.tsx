@@ -9,15 +9,14 @@ interface MainLayoutProps {
 export const MainLayout = ({children}: MainLayoutProps) => {
   return (
     <>
-      <div className="relative h-full flex flex-col items-center text-start">
+      <div className="h-full flex flex-col items-center justify-between text-start">
         <AppHeader/>
 
-        <section className="relative w-full h-full space-y-4 items-center justify-center text-center
-                           overflow-y-scroll snap-y snap-mandatory">
-            {children}
-        </section>
+        <section className="w-full h-full items-center justify-center text-center overflow-y-scroll snap-y snap-proximity">
+          {children}
 
-        <AppFooter/>
+          <AppFooter/>
+        </section>
       </div>
     </>
   );

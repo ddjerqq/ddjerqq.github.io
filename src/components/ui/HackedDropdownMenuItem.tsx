@@ -57,9 +57,15 @@ export const HackedDropdownMenuItem: React.FC<HackProps> = ({text, icon, href, c
       onMouseOver={handleMouseOver as unknown as MouseEventHandler}>
       {icon}
 
-      <Link to={href}>
-        {displayText}
-      </Link>
+      {href.includes("#") ? (
+        <a href={href}>
+          {displayText}
+        </a>
+      ) : (
+        <Link to={href}>
+          {displayText}
+        </Link>
+      )}
     </DropdownMenuItem>
   );
 }
