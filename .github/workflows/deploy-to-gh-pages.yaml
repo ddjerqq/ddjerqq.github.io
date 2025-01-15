@@ -37,6 +37,7 @@ jobs:
       - name: 🔧 Install and Build
         run: |
           npm install --force
+          npm run tw:build
           npm run build
 
       - name: Deploy 🚀
