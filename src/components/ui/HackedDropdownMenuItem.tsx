@@ -1,22 +1,24 @@
-﻿import React, {MouseEventHandler, ReactNode, useEffect, useState} from "react";
+﻿import React, {MouseEventHandler, ReactNode, useEffect, useRef, useState} from "react";
 import {cn} from "@/lib/utils";
 import {DropdownMenuItem} from "@/components/ui/dropdown-menu";
-import {Link} from "react-router-dom";
 
 export interface HackProps {
   text: string;
   icon: ReactNode;
   href: string;
   className?: string;
+  onClick?: () => void;
 }
 
 const INTERVAL = 25;
 const ITERATIONS = 3;
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-export const HackedDropdownMenuItem: React.FC<HackProps> = ({text, icon, href, className}: HackProps) => {
+export const HackedDropdownMenuItem: React.FC<HackProps> = ({text, icon, href, className, onClick}: HackProps) => {
   const [displayText, setDisplayText] = useState(text);
   const [isAnimating, setIsAnimating] = useState(false);
+
+  const linkElement = useRef<HTMLLinkElement>(null);
 
   useEffect(() => {
     if (!isAnimating) return;
@@ -51,21 +53,23 @@ export const HackedDropdownMenuItem: React.FC<HackProps> = ({text, icon, href, c
     if (!isAnimating) setIsAnimating(true);
   };
 
-  return (
-    <DropdownMenuItem
-      className={cn("font-geistMono", className)}
-      onMouseOver={handleMouseOver as unknown as MouseEventHandler}>
-      {icon}
+  const buttonOnClick = () => {
+    if (onClick)
+      onClick();
 
-      {href.includes("#") ? (
-        <a href={href}>
-          {displayText}
-        </a>
-      ) : (
-        <Link to={href}>
-          {displayText}
-        </Link>
-      )}
-    </DropdownMenuItem>
+    if (linkElement.current)
+      linkElement.current.click();
+  }
+
+  return (
+    <a href={href}>
+      <DropdownMenuItem
+        className={cn("font-geistMono", className)}
+        onMouseOver={handleMouseOver as unknown as MouseEventHandler}
+        onClick={buttonOnClick}>
+        {icon}
+        {displayText}
+      </DropdownMenuItem>
+    </a>
   );
 }

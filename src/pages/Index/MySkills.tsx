@@ -55,7 +55,7 @@ export const MySkills = () => {
   ];
 
   return (
-    <SectionWrapper id="my-skills" className="items-center">
+    <SectionWrapper id="my-skills" className="items-center bg-dot-neutral-800">
       <motion.h2
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
@@ -64,11 +64,11 @@ export const MySkills = () => {
           duration: 0.4,
           ease: "easeInOut",
         }}
-        className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-        My skills
+        className="text-6xl font-bold dark:text-white text-center mb-4 mt-16">
+        Some of my skills
       </motion.h2>
 
-      <div className="grid grid-cols-1 max-w-[1000px] sm:grid-cols-2 md:grid-cols-4 px-8 gap-4">
+      <div className="max-w-[1000px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 px-8 gap-4">
         {skills.map((skill, index) => (
           <motion.div key={index}
                       initial={{opacity: 0}}

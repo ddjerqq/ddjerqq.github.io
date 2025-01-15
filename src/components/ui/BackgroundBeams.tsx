@@ -78,7 +78,6 @@ export const BackgroundBeams = React.memo(
             strokeOpacity="0.05"
             strokeWidth="0.5"
           ></path>
-
           {paths.map((path, index) => (
             <motion.path
               key={`path-` + index}

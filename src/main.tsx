@@ -7,6 +7,7 @@ import {Index} from "@/pages/Index/Index";
 import {NotFound} from "@/pages/NotFound";
 import {Toaster} from "@/components/ui/sonner";
 import "./globals.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const root = document.getElementById("root")!;
 createRoot(root).render(
