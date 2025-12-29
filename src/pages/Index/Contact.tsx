@@ -32,7 +32,7 @@ export const Contact = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://www.linkedin.com/in/giorgi-torvalds-4a4a30285/" target="_blank" rel="noreferrer"
+              <Link href="https://www.linkedin.com/in/tenxdeveloper/" target="_blank" rel="noreferrer"
                     className="flex gap-2">
                 <Linkedin className="w-8 h-8"/>
                 <HackText text="LinkedIn"/>

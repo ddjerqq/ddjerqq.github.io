@@ -8,10 +8,11 @@ export const Overview = () => {
           Overview
         </h2>
 
-        <div className="max-w-3xl text-lg space-y-2 flex flex-col">
-          <span>I am a passionate software developer with 5 years of professional experience. I have been writing code since 2017. I'm known for my innate technical expertise, reliability and my mindset of a leader.</span>
-          <span>I have a deep passion for programming and problem solving which fuels my relentless pursuit of knowledge.</span>
-          <span>Learning programming concepts since 2013, allowed me to elevate my skills every year. Every year, my goal is to improve and outdo my past self.</span>
+        <div className="max-w-4xl text-2xl space-y-2 flex flex-col">
+          <span>I solve problems. Every day brings new challenges, and I tackle them head-on.</span> 
+          <span>Since 2013, I've been building solutions and pushing boundaries.</span> 
+          <span>I lead teams, rebuild systems, and make things work better.</span> 
+          <span>When others see obstacles, I see opportunities to create something that matters.</span>
         </div>
       </div>
     </SectionWrapper>

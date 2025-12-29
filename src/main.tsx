@@ -17,7 +17,6 @@ createRoot(root).render(
         <MainLayout>
           <Routes>
             <Route path="/" element={<Index/>}/>
-            <Route path="/blog" element={<div>blog</div>}/>
             <Route path="*" element={<NotFound/>}></Route>
           </Routes>
 

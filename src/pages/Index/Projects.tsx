@@ -29,6 +29,28 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    name: "IronId",
+    description: "Small Roslyn source-generator for strongly-typed ID value types backed by ULIDs.",
+    url: "https://github.com/ddjerqq/ironid",
+    stars: "3",
+    forks: 0,
+    primaryLang: "C#",
+    imagePaths: [
+      "https://images-ext-1.discordapp.net/external/xyhn0_x6rd1GXxAimMNS45tlHvzVR_Xpz_JgGmHorIw/https/opengraph.githubassets.com/da69218ff14930be4daf3b18ed171b94165e0c488886b0533f0e044f5c643115/ddjerqq/ironid?format=webp"
+    ],
+  },
+  {
+    name: "EFCoreDp",
+    description: "A plugin for EF Core that adds support for encrypted AND queryable properties",
+    url: "https://github.com/ddjerqq/Klean.EntityFrameworkCore.DataProtection",
+    stars: "6",
+    forks: 0,
+    primaryLang: "C#",
+    imagePaths: [
+      "/images/efcoredp.png"
+    ],
+  },
+  {
     name: "RGBPrint",
     description: "Print colorful gradients on your terminal!",
     url: "https://github.com/ddjerqq/rgbprint",
@@ -57,7 +79,9 @@ const PROJECTS: Project[] = [
     stars: "6",
     forks: 3,
     primaryLang: "C#",
-    imagePaths: [],
+    imagePaths: [
+      "https://images-ext-1.discordapp.net/external/D2E-VtCAoGF382VT67g9wmK6jRkQfwD2SZ84MnSpy9E/https/opengraph.githubassets.com/e9527539935b0abb152a97eb969383857305373d09fb56874ab7fef9ba1ca840/ddjerqq/veritas?format=webp"
+    ],
   },
   {
     name: "Blazorise",
@@ -68,17 +92,6 @@ const PROJECTS: Project[] = [
     primaryLang: "C#",
     imagePaths: [
       "/images/blazorise.png"
-    ],
-  },
-  {
-    name: "EFCoreDp",
-    description: "A plugin for EF Core that adds support for encrypted AND queryable properties",
-    url: "https://github.com/ddjerqq/Klean.EntityFrameworkCore.DataProtection",
-    stars: "6",
-    forks: 0,
-    primaryLang: "C#",
-    imagePaths: [
-      "/images/efcoredp.png"
     ],
   },
   {
